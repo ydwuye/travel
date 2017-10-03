@@ -1,0 +1,18 @@
+<h1>Welcome to my Travel Site</h1>
+<p>This is my very awesome travel website.</p>
+
+<p> My hometown is <%= @homeland %> </p>
+
+<ul>
+  <% @countries.each do |country| %>
+    <li><%= country %></li>
+  <% end %>
+</ul>
+<!--The command above embeds ruby code into this html file, allowing ruby commands to be committed. -->
+
+
+<% @images.each do |image| %>
+    <%= image_tag image, height:300, width: 400 %><
+  <% end %>
+  <!-- image_tag = allows to help place images without copying repetitive code.  Be sure to set up the instance for image in the welcome_controller.rb to allow this function to happen. With this particular setup, I used an array.  The way to iterate through an array is the .each function. -->
+  
